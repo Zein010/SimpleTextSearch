@@ -19,6 +19,27 @@ Everything is pre-configured — just clone, install dependencies, and run the d
 ### 🧱 Clone the Repository
 
 ```bash
-git clone https:[//github.com/your-username/your-repo-name.git](https://github.com/Zein010/SimpleTextSearch.git)
+git clone https://github.com/Zein010/SimpleTextSearch.git
 cd SimpleTextSearch
+```
+Using npm
+```bash
+npm install
+npm run dev
+```
+
+
+Using pnpm
+```bash
+pnpm install
+pnpm dev
+```
+
+
+
+
+Using yarn
+```bash
+yarn
+yarn dev
 ```
