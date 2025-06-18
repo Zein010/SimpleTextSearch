@@ -1,9 +1,8 @@
 function articleDiv(article, searchText) {
-  
   return (
     <>
-      <div className="mb-4 p-4 border border-gray-200 rounded-lg shadow-sm">
-        <h2 className="text-xl font-semibold">
+      <div className="  ">
+        <h2 className="text-xl  font-bold">
           {getHighlightedText(article.title, searchText)}
         </h2>
         <p className="text-gray-500 text-sm">
@@ -13,7 +12,7 @@ function articleDiv(article, searchText) {
             day: "numeric",
           })}
         </p>
-        <p className="text-gray-700">
+        <p className="text-gray-700 mt-3">
           {getHighlightedText(article.content, searchText)}
         </p>
       </div>

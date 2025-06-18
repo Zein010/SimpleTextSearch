@@ -24,38 +24,57 @@ function App() {
   const frontendArticles = data;
   return (
     <>
-      <div class="grid grid-flow-col grid-cols-4 gap-4">
-        <div class="col-span-3   ">
+      <div className="grid grid-flow-col grid-cols-4 gap-4">
+        <div className="col-span-3   ">
           <h1 className="text-4xl mb-4">Search</h1>
           <input
             type="text"
             onInput={(e) => setSearchText(e.target.value)}
             id="searchText"
-            className="mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5    "
+            className="mb-4 bg-gray-50 border border-gray-300  text-sm rounded-lg block w-full p-2.5    "
             placeholder="Search"
             required
           />
           <div>
-            {searchText == "" || !searchText
-              ? "Enter text to search posts"
-              : displayedArticles.length == 1
-              ? "<b>1 post</b> was found"
-              : displayedArticles.length == 0
-              ? "No posts were found"
-              : displayedArticles.length + " posts found"}
+            {searchText == "" || !searchText ? (
+              <p>Enter text to search posts</p>
+            ) : displayedArticles.length == 1 ? (
+              <p>
+                <b>1 post</b> was found
+              </p>
+            ) : displayedArticles.length == 0 ? (
+              <p>
+                <b>No posts</b> were found
+              </p>
+            ) : (
+              <p>
+                <b>{displayedArticles.length} posts</b> were found
+              </p>
+            )}
           </div>
           <div id="articlesDiv">
             {displayedArticles.map(
-              (article) => articleDiv(article, searchText) // Assuming article is a function that returns JSX
+              (article, index) => {
+                return (
+                  <>
+                    {articleDiv(article, searchText)}
+                    {index < displayedArticles.length - 1 ? (
+                      <hr className="my-4 text-gray-300" />
+                    ) : (
+                      ""
+                    )}
+                  </>
+                );
+              } // Assuming article is a function that returns JSX
             )}
           </div>
         </div>
-        <div class="col-span-1 ...">
+        <div className="col-span-1 ...">
           <div className="  rounded border border-gray-200 shadow-sm  p-6">
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              <b>bitsofcode.</b> Articles on Frontend Development. All articles
-              are writte by <u>Ire Aderinokun</u>, Frontend Developer and User
-              Interface Designer.{" "}
+            <p className="font-normal ">
+              <b>Generated Articles.</b> Articles on Frontend Development. All
+              articles are writte by <u>AI</u>. (Only the articles are
+              AI-Generated)
             </p>
           </div>
         </div>
