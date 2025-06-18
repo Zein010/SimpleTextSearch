@@ -1,12 +1,12 @@
-# 🚀 Vite + React Starter
+Vite + React Starter
 
 Everything is pre-configured — just clone, install dependencies, and run the development server.
 
 ---
 
-## 📦 Getting Started
+## Getting Started
 
-### ✅ Prerequisites
+### Prerequisites
 
 - [Node.js](https://nodejs.org/) (version 16 or higher recommended)
 - One of the following package managers is installed:
@@ -16,20 +16,22 @@ Everything is pre-configured — just clone, install dependencies, and run the d
 
 ---
 
-### 🧱 Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/Zein010/SimpleTextSearch.git
 cd SimpleTextSearch
 ```
-Using npm
+### Setting UP
+
+#### Using npm
 ```bash
 npm install
 npm run dev
 ```
 
 
-Using pnpm
+#### Using pnpm
 ```bash
 pnpm install
 pnpm dev
@@ -38,7 +40,7 @@ pnpm dev
 
 
 
-Using yarn
+#### Using yarn
 ```bash
 yarn
 yarn dev
