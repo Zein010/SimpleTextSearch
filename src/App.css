@@ -7,3 +7,7 @@
   text-align: start;
 }
 
+body {
+
+  overflow-y: scroll;
+}
