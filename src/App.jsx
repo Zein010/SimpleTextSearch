@@ -212,7 +212,15 @@ function App() {
             placeholder="Search"
             required
           />
-          <div>Enter text to search posts</div>
+          <div>
+            {searchText == "" || !searchText
+              ? "Enter text to search posts"
+              : displayedArticles.length == 1
+              ? "<b>1 post</b> was found"
+              : displayedArticles.length == 0
+              ? "No posts were found"
+              : displayedArticles.length + " posts found"}
+          </div>
           <div id="articlesDiv">
             {displayedArticles.map((article, index) => (
               <div
